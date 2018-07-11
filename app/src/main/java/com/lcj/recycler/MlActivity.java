@@ -57,6 +57,7 @@ public class MlActivity extends AppCompatActivity {
 
     //글자 인식
     public void recognizeText(View v) {
+        detectText="";
         BitmapDrawable d = (BitmapDrawable) binding.imageHolder.getDrawable();
         FirebaseVisionImage textImg = FirebaseVisionImage.fromBitmap(d.getBitmap());
         FirebaseVisionTextDetector detector = FirebaseVision.getInstance().getVisionTextDetector();
@@ -102,6 +103,7 @@ public class MlActivity extends AppCompatActivity {
 
     //물건 인식 -> 물건 이름 도출
     public void generateLabels(View v) {
+        label="";
         BitmapDrawable d = (BitmapDrawable) binding.imageHolder.getDrawable();
         FirebaseVisionLabelDetector detector = FirebaseVision.getInstance().getVisionLabelDetector();
         detector.detectInImage(FirebaseVisionImage.fromBitmap(d.getBitmap())).addOnCompleteListener(task -> {
