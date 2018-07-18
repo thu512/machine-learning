@@ -11,24 +11,26 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:replace="android:icon">
-        <activity android:name=".MainActivity"
-            android:windowSoftInputMode="adjustPan">
-
-        </activity>
-
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".SubActivity" />
-        <activity android:name=".MlActivity">
-
-        </activity>
-        <activity android:name=".MenuActivity">
+        <activity android:name=".MlActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
